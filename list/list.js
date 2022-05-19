@@ -6,9 +6,14 @@ checkAuth();
 const logoutButton = document.getElementById('logout');
 const shoppingList = document.getElementById('shopping-list');
 const deleteButton = document.getElementById('delete');
+const createButton = document.getElementById('create-button');
 
 logoutButton.addEventListener('click', () => {
     logout();
+});
+
+createButton.addEventListener('click', () => {
+    location.replace('../create');
 });
 
 deleteButton.addEventListener('click', async () => {

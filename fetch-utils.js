@@ -65,7 +65,7 @@ export async function deleteList(user) {
 
     if (response.data) {
         return response.data;
-    } else console.log(response.error.message);
+    } 
 }
 
 // function checkError({ data, error }) {
