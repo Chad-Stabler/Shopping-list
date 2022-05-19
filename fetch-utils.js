@@ -8,7 +8,7 @@ export function getUser() {
 }
 
 export async function fetchList() {
-    const response = await client.from('shopping_list').select('*').order('created-at');
+    const response = await client.from('shopping_list').select('*').order('created_at');
 
     if (response.data) {
         return response.data;
@@ -22,8 +22,8 @@ export async function togglePurchased(item) {
     }
 }
 
-export async function createNewItem(name, quantity) {
-    const response = await client.from('shopping_list').insert({ name, quantity });
+export async function createNewItem(item, qty) {
+    const response = await client.from('shopping_list').insert({ item, qty });
 
     if (response.data) {
         return response.data;
