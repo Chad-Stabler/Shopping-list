@@ -1,0 +1,27 @@
+#create-button {
+    position: fixed;
+    left: 20px;
+    top: 60px;
+}
+
+#body {
+    background-image: url('../assets/grocery-background.jpg');
+}
+
+main {
+    display: flex;
+    position: fixed;
+    top: 70px;
+    width: 20%;
+    left: 40%;
+    background-color: rgba(99, 18, 18, 0.45);
+    border-radius: 5%;
+}
+
+ul {
+    margin: 10px 10px;
+}
+
+main button {
+    margin: 10px 10px;
+}
