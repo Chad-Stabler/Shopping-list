@@ -22,6 +22,14 @@ export async function togglePurchased(item) {
     }
 }
 
+export async function createNewItem(name, quantity) {
+    const response = await client.from('shopping_list').insert({ name, quantity });
+
+    if (response.data) {
+        return response.data;
+    }
+}
+
 export function checkAuth() {
     const user = getUser();
 
