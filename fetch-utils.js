@@ -15,6 +15,13 @@ export async function fetchList() {
     }
 }
 
+export async function togglePurchased(item) {
+    const response = await client.from('shopping_list').update({ purchased: !item.purchased });
+    if (response.data) {
+        return response.data;
+    }
+}
+
 export function checkAuth() {
     const user = getUser();
 
