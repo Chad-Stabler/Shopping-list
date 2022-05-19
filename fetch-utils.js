@@ -60,6 +60,14 @@ export async function logout() {
     return (window.location.href = '/');
 }
 
+export async function deleteList(user) {
+    const response = await client.from('shopping_list').delete().match({ user_id: user.user_id });
+
+    if (response.data) {
+        return response.data;
+    } else console.log(response.error.message);
+}
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }

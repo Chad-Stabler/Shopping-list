@@ -1,4 +1,4 @@
-import { checkAuth, fetchList, logout, togglePurchased } from '../fetch-utils.js';
+import { checkAuth, deleteList, fetchList, logout, togglePurchased } from '../fetch-utils.js';
 import { renderElement } from '../render-utils.js';
 
 checkAuth();
@@ -12,7 +12,11 @@ logoutButton.addEventListener('click', () => {
 });
 
 deleteButton.addEventListener('click', async () => {
-    //finish this function last
+    const list = await fetchList();
+    for (let item of list) {
+        await deleteList(item);
+    }
+    displayList();
 });
 
 
