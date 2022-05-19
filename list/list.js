@@ -19,14 +19,13 @@ deleteButton.addEventListener('click', async () => {
 async function displayList() {
     shoppingList.textContent = '';
     const data = await fetchList();
-    for (let item of data) {
-        const newLi = renderElement(item);
-        if (item.purchased) {
+    for (let newItem of data) {
+        const newLi = renderElement(newItem);
+        if (newItem.purchased) {
             newLi.classList.add('bought');
         }
         newLi.addEventListener('click', async () => {
-            newLi.classList.toggle('bought');
-            await togglePurchased(item);
+            await togglePurchased(newItem);
             displayList();
         });
         shoppingList.append(newLi);

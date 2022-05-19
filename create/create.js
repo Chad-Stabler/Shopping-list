@@ -7,7 +7,7 @@ const errorMsg = document.getElementById('error-message');
 createForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(createForm);
-    const itemData = await createNewItem(data.get('name'), data.get('qty'));
+    const itemData = await createNewItem(data.get('item'), data.get('qty'));
 
     if (itemData) {
         window.location.href = '/list';
