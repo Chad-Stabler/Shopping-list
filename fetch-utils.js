@@ -7,6 +7,14 @@ export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
 
+export async function fetchList() {
+    const response = await client.from('shopping_list').select('*').order('created-at');
+
+    if (response.data) {
+        return response.data;
+    }
+}
+
 export function checkAuth() {
     const user = getUser();
 
