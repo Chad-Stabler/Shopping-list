@@ -19,7 +19,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: rgb(117, 54, 54);
 }
 
 main {
@@ -122,14 +122,35 @@ footer {
 }
 
 .auth-container {
-    margin: 10px;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+#sign-in {
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+#sign-up {
+    margin: 10px 10px;
+    border-radius: 5px;
 }
 
 .auth-container form {
     display: flex;
     flex-direction: column;
+    background-color: rgba(35, 56, 119, 0.45);
+    margin: 10px 10px;
+    align-items: center;
 }
 
 .auth-container button {
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 75px;
+    margin: 5px 5px;
+}
+
+.auth-container input {
+    margin: 10px 10px;
 }
