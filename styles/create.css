@@ -1,0 +1,36 @@
+button {
+    position: fixed;
+    display: flex;
+    width: 6%;
+    left: 47%;
+    top: 30px;
+    background-color: rgb(83, 107, 128);
+    border-radius: 2px;
+    border: 2px solid rgb(129, 69, 69);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 10%;
+    left: 45%;
+    top: 80px;
+    color: blanchedalmond;
+}
+
+form input {
+    margin: 10px 10px;
+}
+
+form label {
+    margin: 5px 5px;
+}
+
+form button {
+    position: fixed;
+    top: 250px;
+}
+
+body {
+    background-color: rgb(78, 27, 27);
+}
