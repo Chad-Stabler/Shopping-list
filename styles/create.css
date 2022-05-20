@@ -26,6 +26,11 @@ form label {
     margin: 5px 5px;
 }
 
+form button {
+    position: fixed;
+    top: 250px;
+}
+
 body {
     background-color: rgb(78, 27, 27);
 }
